@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+       <div class="main-container">
+      <h1>Editable Resume Generator</h1>
+      <div class="form-container">
+        <form id="resume-id">
+          <fieldset>
+            <legend id="p-info">Personal Information</legend>
+            <input type="text" name="first-name" id="name" placeholder="Full Name" required />
+            <input type="email" name="email" id="email" placeholder="Email" required />
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
+          </fieldset>
+          <fieldset>
+            <legend>Education</legend>
+            <input type="text" name="school" id="school" placeholder="School" required />
+            <input type="text" name="degree" id="degree" placeholder="Degree" />
+            <label for="date">Graduation Year</label>
+            <input type="date" name="graduation-year" id="graduation-year" placeholder="Graduation Year" />
+          </fieldset>
+          <fieldset>
+            <legend>Skills</legend>
+            <input type="text" name="skill" id="skill" placeholder="Skill" />
+            <select name="level" id="level">
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Work Experience</legend>
+            <input type="text" name="position" id="position" placeholder="Position" />
+            <input type="text" name="company" id="company" placeholder="Company" />
+            <input type="number" name="years" id="experience" placeholder="Years" />
+          </fieldset>
+          <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+      </div>
+    </div>
+    <div class="resume-show" contenteditable="true"> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
